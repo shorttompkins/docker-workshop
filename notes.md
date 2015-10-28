@@ -132,3 +132,12 @@ Hello, World.
 ```
 
 Must have built first or the name of the container wouldn't be found when executing the `run` command.
+
+### Node server
+
+```
+$ docker build -t jkat98/node .
+$ docker run -it -p 3300:3300 jkat98/node node server.js
+```
+
+Runs the node server launch command via the container, and forwards ports within the container to local (of the same value).  Then access the IP for the docker VM by port and the node server running on the container is visible to you via browser!
